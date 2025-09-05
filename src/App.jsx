@@ -62,22 +62,31 @@ function App() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6" role="main" aria-label="Quiz Application">
-      <h1 className="text-2xl font-bold mb-2">Quiz App</h1>
-      <p className="text-gray-600 mb-6">
-        High Score: <span className="font-semibold">{highScore}</span>
+    <div
+      className="max-w-2xl mx-auto p-8"
+      role="main"
+      aria-label="Quiz Application"
+    >
+      <h1 className="text-3xl font-extrabold mb-3 text-center">
+        🎯 Quiz Challenge
+      </h1>
+      <p className="text-gray-700 mb-8 text-center">
+        High Score:{" "}
+        <span className="font-semibold text-blue-600">{highScore}</span>
       </p>
 
       {!started ? (
-        <div className="space-y-4">
-          <p className="text-gray-700 font-medium">Choose Difficulty:</p>
-          <div className="flex gap-4">
+        <div className="space-y-6 text-center">
+          <p className="text-gray-800 font-medium">
+            Select your difficulty to begin:
+          </p>
+          <div className="flex justify-center gap-4">
             <button
               onClick={() => {
                 setDifficulty("easy");
                 setStarted(true);
               }}
-              className="px-4 py-2 bg-green-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300"
+              className="px-5 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
               aria-label="Start quiz with easy difficulty"
             >
               Easy
@@ -87,7 +96,7 @@ function App() {
                 setDifficulty("medium");
                 setStarted(true);
               }}
-              className="px-4 py-2 bg-yellow-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"
+              className="px-5 py-2 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 transition"
               aria-label="Start quiz with medium difficulty"
             >
               Medium
@@ -97,7 +106,7 @@ function App() {
                 setDifficulty("hard");
                 setStarted(true);
               }}
-              className="px-4 py-2 bg-red-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
+              className="px-5 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition"
               aria-label="Start quiz with hard difficulty"
             >
               Hard

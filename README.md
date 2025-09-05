@@ -1,76 +1,71 @@
-# Quiz App
+# 🎯 React Quiz Application
 
-A simple and interactive Quiz Application built with **React + Vite + Tailwind CSS**.  
-This project was developed as per the given requirements and includes bonus features like a timer, difficulty levels, high score tracking, animations, and accessibility improvements.
-
----
-
-## Features
-
-- Display one question at a time
-- Multiple-choice answers
-- Progress indicator
-- Final score and result summary
-- Restart option
-
-### Bonus Features:
-- Timer per question (30s countdown)
-- Difficulty levels (Easy / Medium / Hard)
-- High Score tracking (saved in localStorage)
-- Smooth animations with Framer Motion
-- Accessibility support (keyboard navigation, ARIA labels)
+An engaging and lightweight quiz platform built using **React, Vite, and Tailwind CSS**.  
+It not only fulfills the base requirements but also comes with extra features like timed questions, difficulty modes, persistent high scores, animations, and enhanced accessibility.
 
 ---
 
-## Tech Stack
+## 🚀 Key Highlights
 
-- React
-- Vite
-- Tailwind CSS
-- Framer Motion
+- Questions displayed one at a time  
+- Multiple-choice options with instant feedback  
+- Progress bar to track attempt status  
+- Final score with detailed results  
+- Ability to retake the quiz anytime  
 
----
-
-## Project Structure
-
-```
-QuizApp/
- ├── src/
- │   ├── components/   # Question, Result, Progress components
- │   ├── data/         # questions.json
- │   ├── App.jsx       # Main logic
- │   ├── index.css     # Tailwind styles
- │   └── main.jsx      # Entry point
- ├── public/
- ├── package.json
- └── README.md
-```
+### ✨ Extra Functionalities
+- Countdown timer (30 seconds per question)  
+- Difficulty selection (Easy | Medium | Hard)  
+- High score saved in localStorage for persistence  
+- Smooth transitions & animations (Framer Motion)  
+- Full accessibility support (keyboard & ARIA-friendly)  
 
 ---
 
-## Installation & Setup
+## 🛠️ Technology Stack
 
-1. Clone the repository:
-   In cmd:
-   git clone https://github.com/tnandini19/quiz-app.git
-   cd quiz-app
+- **Frontend:** React + Vite  
+- **Styling:** Tailwind CSS  
+- **Animations:** Framer Motion  
 
-2. Install dependencies:
-   In cmd:
-   npm install
+---
 
-3. Start the development server:
-   In cmd
-   npm run dev
+## 📂 Folder Layout
 
-4. Open in your browser:
-   http://localhost:5173/
+quiz-app/
+├── src/
+│ ├── components/ → UI components (Question, Progress, Result)
+│ ├── data/ → Question dataset (questions.json)
+│ ├── App.jsx → Core logic & state handling
+│ ├── index.css → Tailwind base styles
+│ └── main.jsx → App entry file
+├── public/
+├── package.json
+└── README.md
+
+## Implementation
+
+1. Clone the repository
+
+git clone https://github.com/tnandini19/quiz-app.git
+cd quiz-app
 
 
-## Build for Production
-    In cmd:
-    npm run build
+2.Install dependencies
 
-## Live Demo
+npm install
 
-🔗 [Quiz App Live Demo](https://quiz-app-nandini.netlify.app)
+
+3.Run locally
+
+npm run dev
+
+
+Open 👉 http://localhost:5173
+
+📦 Build for Production
+npm run build
+
+## 🌐Live Preview
+
+🔗 Click here to try the app

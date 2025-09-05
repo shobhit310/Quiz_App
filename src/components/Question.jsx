@@ -2,48 +2,47 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 function Question({ data, onAnswer, selected, onTimeout }) {
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [countdown, setCountdown] = useState(30);
 
-  // Reset timer when new question loads
+  // Reset countdown whenever a new question appears
   useEffect(() => {
-    setTimeLeft(30);
+    setCountdown(30);
   }, [data]);
 
-  // Countdown logic
+  // Timer logic
   useEffect(() => {
-    if (timeLeft <= 0) {
+    if (countdown <= 0) {
       onTimeout();
       return;
     }
-    const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [timeLeft, onTimeout]);
+    const interval = setTimeout(() => setCountdown((prev) => prev - 1), 1000);
+    return () => clearTimeout(interval);
+  }, [countdown, onTimeout]);
 
   return (
     <motion.div
       key={data.question}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.4 }}
-      className="p-6 border rounded-xl shadow-sm bg-white"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, y: -15 }}
+      transition={{ duration: 0.3 }}
+      className="p-6 rounded-xl border shadow bg-gray-50"
     >
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">{data.question}</h2>
-        <span className="text-sm font-medium text-gray-600">
-          ⏳ {timeLeft}s
-        </span>
+      <div className="flex justify-between items-center mb-5">
+        <h2 className="text-xl font-bold">{data.question}</h2>
+        <span className="text-sm text-gray-500">⏱ {countdown}s</span>
       </div>
-      <div className="grid gap-3">
-        {data.options.map((option, idx) => (
+
+      <div className="flex flex-col gap-3">
+        {data.options.map((option, index) => (
           <motion.button
-            key={idx}
-            whileTap={{ scale: 0.95 }}
+            key={index}
+            whileTap={{ scale: 0.97 }}
             onClick={() => onAnswer(option)}
-            className={`px-4 py-2 rounded-lg border transition 
+            className={`px-4 py-2 rounded-md border text-left transition-colors
               ${
                 selected === option
-                  ? "bg-blue-600 text-white border-blue-600"
+                  ? "bg-blue-500 text-white border-blue-500"
                   : "bg-white hover:bg-gray-100"
               }`}
           >
