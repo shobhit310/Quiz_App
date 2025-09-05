@@ -1,33 +1,32 @@
 [
   {
-    "question": "What is the capital of France?",
-    "options": ["Berlin", "London", "Paris", "Rome"],
-    "answer": "Paris",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Venus", "Saturn", "Mars", "Jupiter"],
+    "answer": "Mars",
     "difficulty": "easy"
   },
   {
-    "question": "Which language runs in a web browser?",
-    "options": ["Java", "C", "Python", "JavaScript"],
-    "answer": "JavaScript",
+    "question": "Which gas do humans primarily exhale?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "answer": "Carbon Dioxide",
     "difficulty": "easy"
   },
   {
-    "question": "Who is the founder of Microsoft?",
-    "options": ["Steve Jobs", "Bill Gates", "Elon Musk", "Mark Zuckerberg"],
-    "answer": "Bill Gates",
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
+    "answer": "Leonardo da Vinci",
     "difficulty": "medium"
   },
   {
-    "question": "What does CSS stand for?",
-    "options": ["Central Style Sheets", "Cascading Style Sheets", "Colorful Style Syntax", "Creative Style System"],
-    "answer": "Cascading Style Sheets",
+    "question": "What is the chemical symbol for Gold?",
+    "options": ["Ag", "Au", "Gd", "Go"],
+    "answer": "Au",
     "difficulty": "medium"
   },
   {
-    "question": "What year was JavaScript launched?",
-    "options": ["1996", "1995", "1994", "1993"],
-    "answer": "1995",
+    "question": "Which country hosted the first modern Olympic Games in 1896?",
+    "options": ["France", "USA", "Greece", "Italy"],
+    "answer": "Greece",
     "difficulty": "hard"
   }
 ]
-
